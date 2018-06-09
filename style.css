@@ -94,7 +94,7 @@ button{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    margin: 8px 0;
+    margin: 2px 0;
     cursor: pointer;
      border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -108,7 +108,7 @@ button{
     background-color:red;
     color: white;
     padding: 10px 20px;
-    margin: 5px 0;
+    margin: 2px 0;
     cursor: pointer;
      border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -223,6 +223,13 @@ button{
 input[type=text],[type=password]{
     height: 31px;
 }      
+    
+button{
+ padding:6px 0px;     
+}
+#cancel{
+padding:6px 0px;
+}
 }
 @media(max-width:320px){
     
