@@ -1,0 +1,103 @@
+<html><head><title>Registration Form</title>
+    <link href="style.css" rel=stylesheet type="text/css" media="">
+  <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="favicon.ico" type="image" rel="icon">
+
+    </head>
+    <script>
+        function lettersonly(input){
+            var b=/[^a-z]/gi;
+            input.value = input.value.replace(b, "");
+        }
+        
+        function noonly(input){
+            var c=/[^0-9]/g;
+            input.value = input.value.replace(c, "");
+        }
+function myfun(){
+        var a=document.getElementById("mobno.").value;
+        var e=document.getElementById("email").value;
+        var ag=document.getElementById("age").value;
+        var pa=document.getElementById("pass").value;
+        var con=document.getElementById("cpass").value;
+    
+    if(e.indexOf('@')<=0){
+        alert("Invlid  Email ID");
+        return false;
+    }
+    if((e.charAt(e.length-4)!='.') && (e.charAt(e.length-3)!='.')){
+        alert("Plz check Your email Id");
+        return false;
+        }
+    if(ag.length>2)
+        {
+            alert("Plz Correct Your Age");
+        }
+    if(ag<=20)
+        {
+            alert("Your Age should be greater then 20");
+        }
+    
+    if(a.length<10)
+    {
+    alert("plz check your mobile no.");
+    return false;
+    }
+    if(a.length>10)
+    {
+    alert("plz check your mobile no.");
+    return false;
+    }
+    if((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7))
+    {
+    alert("plz check your mobile no.");
+    return false;
+    }
+    if(pa.length<=7)
+        {
+            alert("Your Password Must Be Of 8 letters");
+        }
+    if(pa==con)
+        {
+            confirm("Thanks For Register");
+        }
+    else{
+        alert("Plz Confirm The Password");
+    }
+}
+        </script>
+<body>
+<button id="register" onclick="document.getElementById('container0').style.display='block'" style="width:auto;" title="log in" >
+<b>Log In</b></button>
+<div id="container0">
+<span onclick="document.getElementById('container0').style.display='none'" class="close" title="Close form"><b>&times;</b></span>
+<form id="register1" name="form1" onsubmit="return myfun()">
+
+    <center><img id="banner" src="Logo.png"></center>
+    <br>
+    <span class="fa fa-user"></span>
+    <input type="text" title="you can use only lettes" placeholder="Enter your name" id="uname" name="uname" onkeyup="lettersonly(this)" required>
+    <span class="fa fa-envelope"></span>
+    <input type="text" placeholder="Email" id="email" name="Email" required>
+    <span class="fa fa-graduation-cap"></span>
+    <input type="text" placeholder="Age" name="age" onkeyup="noonly(this)" id="age"
+           title="Age should Above 20 " required>
+    <span class="fa fa-mobile"></span>
+    <input type="text" placeholder="Mobile No." onkeyup="noonly(this)" name="mob" id="mobno." required>
+    <span class="fa fa-lock"></span>    
+    <input type="password" placeholder="Password" name="pass" 
+     id="pass"       style="color: green;" required>
+    <span class="fa fa-lock"></span>
+    <input type="password" placeholder="Confirm Password" name="cpass" 
+    id="cpass" style="color: green;" required>
+    
+    <button type="submit"><b>Register</b></button>
+    <button id="cancel" onclick="document.getElementById('container0').style.display='none'" title="cancel" >
+<b>Cancel</b></button>
+
+    </form>
+</div>
+
+    </body>
+    </html>
