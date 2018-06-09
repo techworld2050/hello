@@ -1,0 +1,236 @@
+
+    body{
+    background: skyblue;
+    text-align: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;   
+    }
+*{  
+    padding: 0px;
+    margin: 0px;
+}
+    #register{
+    background-color: #4CAF50;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    margin: 15px 15px;
+    cursor: pointer;
+    width: 100%;
+    animation: none;
+    }
+    #container0{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: black;
+        opacity: .7;
+        z-index: 1;
+        left: 0%;
+        top: 0%;
+        overflow: auto;
+        display: none;
+    }
+    .close{
+        position: relative;
+        float: right;
+        font-size: 45px;
+        color: white;
+        z-index: 2;
+        margin-top: 2%;
+        margin-right: 5%;
+        cursor: pointer;
+    }
+    #register1{
+        margin: 5% auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 10px;
+        background: white;
+        border-radius: 10px;
+        height: 550px;
+        width:320px;
+        backface-visibility: visible;
+        animation: flip 1s 1;
+    }
+    #banner{
+        width: 40%;
+        height: 25%;
+         animation: zoomInDown 2s 1;
+        animation-delay: 1s;
+}
+#container0 form span{
+    height: 30px;
+    border-right: 2px solid silver;
+    background: lightgreen;
+    width: 30px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    padding: 3px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    animation: fadeInLeft 2s 1;
+    animation-delay: 1s;
+}
+input[type=text],[type=password]{
+    width: 88%;
+    padding: 8px 15px;
+    float: left;
+    height: 36px;
+    margin: 0px 0px 12px 0px;
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    animation: fadeInLeft 1s 1;
+    animation-delay: 1s;
+}
+button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+     border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    animation: bounce 1s 1;
+    animation-delay: 3s;
+    transform-origin: center bottom;
+}    
+
+#cancel{
+    background-color:red;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+     border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    display: none;
+        animation: bounce 1s 1;
+    animation-delay: 3s;
+    transform-origin: center bottom;
+
+}
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounce {
+  from,20%,53%,80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@media(max-width:460px){
+    #container0{
+        padding: 5px;
+    }
+    .close{display: none;
+    }
+    #cancel{
+        display: block;
+    }
+    #register1{
+        padding: 10px;
+        position: fixed;
+        margin-top: 0%;
+        height: 90%;
+        width: 90%;
+        
+    }
+    
+}
+@media(max-width:352px){
+    
+    #container0{
+        padding: 5px;
+    }
+    #register1{
+        height: 80%;
+        width:91%;
+    }
+ #container0 form span{
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+}
+input[type=text],[type=password]{
+    height: 31px;
+}      
+}
+@media(max-width:320px){
+    
+    #container0{
+   width: 320px;
+    }
+    #register1{
+        height: 500px;
+        width:290px;
+    }
+}
